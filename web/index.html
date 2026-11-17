@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NovaDijitalTR — WhatsApp Asistanı Demoları</title>
+<style>
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:-apple-system,"Segoe UI",Roboto,Arial,sans-serif; background:#0b141a; color:#e9edef; min-height:100vh; padding:40px 20px; }
+  .kap { max-width:960px; margin:0 auto; }
+  h1 { font-size:30px; margin-bottom:8px; } h1 span { color:#25d366; }
+  p.alt { color:#8696a0; margin-bottom:30px; line-height:1.5; max-width:640px; }
+  .izgara { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:14px; }
+  a.kart { display:block; background:#1f2c34; border-radius:14px; padding:18px; color:inherit; text-decoration:none;
+           border:1px solid #2a3942; transition:.15s; }
+  a.kart:hover { border-color:#25d366; transform:translateY(-2px); }
+  .kart b { display:block; font-size:16px; margin-bottom:6px; }
+  .kart small { color:#8696a0; font-size:13px; }
+  .etiket { display:inline-block; font-size:11px; padding:2px 8px; border-radius:10px; background:#25d36622; color:#25d366; margin-top:10px; }
+  .alt-link { margin-top:30px; color:#8696a0; font-size:14px; } .alt-link a { color:#25d366; }
+</style>
+</head>
+<body>
+<div class="kap">
+  <h1>WhatsApp <span>Yapay Zeka Asistanı</span></h1>
+  <p class="alt">Müşterileriniz WhatsApp'tan ne yazarsa yazsın 7/24 anında cevap verir, randevu ve rezervasyon alır, bilmediği konuda sizi çağırır. Aşağıdan bir sektör seçip deneyin.</p>
+  <div class="izgara" id="liste"></div>
+  <p class="alt-link">İşletme sahibi misiniz? <a href="/panel">Yönetim paneline girin</a> · NovaDijitalTR</p>
+</div>
+<script>
+const SEKTOR = { dis_klinigi:"Diş Kliniği", kuafor_guzellik:"Kuaför / Güzellik", restoran_kafe:"Restoran / Kafe",
+  emlak:"Emlak", oto_servis:"Oto Servis", fitness_spor:"Spor Salonu", dijital_ajans:"Dijital Ajans", genel:"Genel" };
+fetch("/api/sirketler").then(r => r.json()).then(liste => {
+  liste.sort((a, b) => (b.id === "novadijitaltr") - (a.id === "novadijitaltr"));
+  document.getElementById("liste").innerHTML = liste.map(s => `
+    <a class="kart" href="/demo/${s.id}">
+      <b>${s.ad}</b><small>Asistan: ${s.asistan_adi || "-"}</small><br>
+      <span class="etiket">${SEKTOR[s.sektor] || s.sektor}</span>
+      ${s.whatsapp_bagli ? '<span class="etiket">WhatsApp bağlı</span>' : ""}
+    </a>`).join("");
+});
+</script>
+</body>
+</html>

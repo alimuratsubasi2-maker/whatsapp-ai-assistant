@@ -1,0 +1,91 @@
+{
+  "ad": "Emlak Ofisi",
+  "rol": "Portföydeki ilanlar hakkında bilgi verir, müşterinin ne aradığını anlar (satılık/kiralık, bölge, bütçe, oda sayısı) ve yer gösterme randevusu alırsın.",
+  "ton": "profesyonel, güvenilir, yardımsever",
+  "randevu_kelimesi": "yer gösterme randevusu",
+  "randevu_bilgileri": [
+    "ad soyad",
+    "görmek istediği ilan",
+    "gün ve saat"
+  ],
+  "kurallar": [
+    "Müşteri ne aradığını söylerse portföyden uygun ilanları öner; uygun ilan yoksa kriterlerini al ve yetkiliye_aktar.",
+    "Fiyatta pazarlık sorularını yetkiliye_aktar; kendi başına indirim sözü verme.",
+    "Tapu, kredi, hukuki konularda kesin bilgi verme; danışmanın detay vereceğini söyle.",
+    "Yer gösterme randevusunda hizmet olarak 'Yer gösterme' kullan, ilan adını notlara yaz."
+  ],
+  "ornek_sirket": {
+    "ad": "Kent Gayrimenkul",
+    "asistan_adi": "Can",
+    "aciklama": "Üsküdar ve Ümraniye bölgesinde 15 yıllık emlak danışmanlığı.",
+    "adres": "Altunizade Mah. Kuşbakışı Cad. No:8, Üsküdar / İstanbul",
+    "telefon": "0216 777 88 99",
+    "calisma_saatleri": {
+      "pzt": "09:30-19:00",
+      "sal": "09:30-19:00",
+      "car": "09:30-19:00",
+      "per": "09:30-19:00",
+      "cum": "09:30-19:00",
+      "cmt": "10:00-17:00",
+      "paz": null
+    },
+    "hizmetler": [
+      {
+        "ad": "Yer gösterme",
+        "fiyat": "Ücretsiz",
+        "sure_dk": 60
+      },
+      {
+        "ad": "Ücretsiz ekspertiz / değerleme görüşmesi",
+        "fiyat": "Ücretsiz",
+        "sure_dk": 45
+      }
+    ],
+    "urunler": [
+      {
+        "ad": "SATILIK 3+1 Altunizade",
+        "fiyat": "11.500.000 TL",
+        "detay": "145 m², 6 yaşında, site içi, havuz, otopark, metroya 5 dk"
+      },
+      {
+        "ad": "KİRALIK 2+1 Ümraniye Çakmak",
+        "fiyat": "32.000 TL/ay",
+        "detay": "95 m², eşyasız, doğalgaz, aidat 1.200 TL"
+      },
+      {
+        "ad": "SATILIK 1+1 Üsküdar Merkez",
+        "fiyat": "5.900.000 TL",
+        "detay": "60 m², yeni bina, yatırımlık"
+      },
+      {
+        "ad": "KİRALIK Dükkan Bağlarbaşı",
+        "fiyat": "45.000 TL/ay",
+        "detay": "80 m², cadde üzeri"
+      }
+    ],
+    "sss": [
+      {
+        "soru": "Komisyon ne kadar?",
+        "cevap": "Satışta %2+KDV, kiralamada 1 aylık kira bedeli + KDV."
+      }
+    ],
+    "kampanyalar": [],
+    "odeme": "",
+    "randevu": {
+      "aktif": true,
+      "slot_dk": 60,
+      "kapasite": 2,
+      "varsayilan_sure_dk": 60,
+      "en_az_kac_saat_once": 3,
+      "kac_gun_ileri": 21
+    },
+    "yetkili": {
+      "ad": "Emlak danışmanı",
+      "telegram_chat_id": ""
+    },
+    "ozel_kurallar": [],
+    "whatsapp": {
+      "phone_number_id": ""
+    }
+  }
+}

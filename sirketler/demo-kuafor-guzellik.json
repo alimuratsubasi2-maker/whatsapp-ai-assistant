@@ -1,0 +1,101 @@
+{
+  "ad": "Bella Kuaför & Güzellik",
+  "asistan_adi": "Derya",
+  "aciklama": "Ataşehir'de kadın-erkek kuaför ve güzellik salonu. 3 kuaför, 1 güzellik uzmanı.",
+  "adres": "Atatürk Mah. Ataşehir Bulvarı No:12/B, Ataşehir / İstanbul",
+  "telefon": "0216 444 55 66",
+  "instagram": "@bellakuafor",
+  "calisma_saatleri": {
+    "pzt": null,
+    "sal": "10:00-20:00",
+    "car": "10:00-20:00",
+    "per": "10:00-20:00",
+    "cum": "10:00-20:00",
+    "cmt": "09:00-20:00",
+    "paz": "11:00-18:00"
+  },
+  "hizmetler": [
+    {
+      "ad": "Kadın saç kesimi",
+      "fiyat": "800 TL",
+      "sure_dk": 45
+    },
+    {
+      "ad": "Erkek saç kesimi",
+      "fiyat": "450 TL",
+      "sure_dk": 30
+    },
+    {
+      "ad": "Fön",
+      "fiyat": "400 TL",
+      "sure_dk": 30
+    },
+    {
+      "ad": "Dip boya",
+      "fiyat": "1.500 TL'den başlayan",
+      "sure_dk": 90
+    },
+    {
+      "ad": "Balyaj / ombre",
+      "fiyat": "4.500 TL'den başlayan",
+      "sure_dk": 180
+    },
+    {
+      "ad": "Keratin bakım",
+      "fiyat": "3.500 TL'den başlayan",
+      "sure_dk": 150
+    },
+    {
+      "ad": "Manikür",
+      "fiyat": "500 TL",
+      "sure_dk": 45
+    },
+    {
+      "ad": "Kalıcı oje",
+      "fiyat": "650 TL",
+      "sure_dk": 60
+    },
+    {
+      "ad": "Kaş-bıyık",
+      "fiyat": "200 TL",
+      "sure_dk": 15
+    }
+  ],
+  "urunler": [
+    {
+      "ad": "Uzmanlarımız",
+      "detay": "Selin (renk uzmanı), Mert (erkek kesim), Aylin (kesim-fön), Zeynep (manikür, kaş)"
+    }
+  ],
+  "sss": [
+    {
+      "soru": "Gelin başı yapıyor musunuz?",
+      "cevap": "Evet, gelin paketi için yetkilimiz size özel fiyat verir."
+    }
+  ],
+  "kampanyalar": [
+    "Salı-çarşamba günleri fön %20 indirimli"
+  ],
+  "odeme": "Nakit, kredi kartı",
+  "randevu": {
+    "aktif": true,
+    "slot_dk": 15,
+    "kapasite": 4,
+    "varsayilan_sure_dk": 30,
+    "en_az_kac_saat_once": 1,
+    "kac_gun_ileri": 21
+  },
+  "yetkili": {
+    "ad": "Salon sahibi",
+    "telegram_chat_id": ""
+  },
+  "ozel_kurallar": [
+    "Gelin paketi sorulursa yetkiliye_aktar."
+  ],
+  "whatsapp": {
+    "phone_number_id": ""
+  },
+  "id": "demo-kuafor-guzellik",
+  "sektor": "kuafor_guzellik",
+  "demo": true
+}

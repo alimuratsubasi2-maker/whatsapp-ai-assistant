@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>WhatsApp Asistanı — Demo</title>
+<style>
+  :root { --yesil:#008069; --koyu:#111b21; --balon-ben:#d9fdd3; --zemin:#efeae2; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background:#d1d7db;
+         height:100dvh; display:flex; justify-content:center; align-items:center; }
+  .telefon { width:100%; max-width:430px; height:100dvh; max-height:900px; background:var(--zemin);
+             display:flex; flex-direction:column; overflow:hidden; box-shadow:0 10px 40px rgba(0,0,0,.25); }
+  @media (min-width:600px){ .telefon{ height:92dvh; border-radius:22px; } }
+  header { background:var(--yesil); color:#fff; display:flex; align-items:center; gap:10px; padding:10px 12px; }
+  .avatar { width:40px; height:40px; border-radius:50%; background:#fff3; display:grid; place-items:center;
+            font-weight:700; font-size:18px; flex-shrink:0; }
+  .baslik { flex:1; min-width:0; }
+  .baslik b { display:block; font-size:16px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .baslik small { font-size:12.5px; opacity:.85; }
+  header button { background:none; border:0; color:#fff; font-size:13px; cursor:pointer; opacity:.9;
+                  border:1px solid #fff6; border-radius:14px; padding:4px 10px; }
+  #akis { flex:1; overflow-y:auto; padding:12px 14px 6px;
+          background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Cg fill='%23d6cfc4' fill-opacity='.35'%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3Ccircle cx='50' cy='40' r='1.5'/%3E%3Cpath d='M30 60h6v6h-6z'/%3E%3C/g%3E%3C/svg%3E"); }
+  .tarih { text-align:center; margin:6px 0 12px; }
+  .tarih span { background:#fff; color:#54656f; font-size:12px; padding:5px 12px; border-radius:8px; box-shadow:0 1px .5px #0002; }
+  .bilgi { background:#ffeecd; color:#54656f; font-size:12.5px; text-align:center; padding:8px 12px;
+           border-radius:8px; margin:0 auto 12px; max-width:90%; line-height:1.4; }
+  .satir { display:flex; margin:3px 0; }
+  .satir.ben { justify-content:flex-end; }
+  .balon { max-width:82%; padding:6px 9px 18px; border-radius:8px; position:relative; font-size:14.6px;
+           line-height:1.38; box-shadow:0 1px .5px #0002; white-space:pre-wrap; word-wrap:break-word; color:var(--koyu); }
+  .ben .balon { background:var(--balon-ben); border-top-right-radius:0; }
+  .o .balon { background:#fff; border-top-left-radius:0; }
+  .yetkili .balon { background:#fff; border-left:3px solid #f5a623; }
+  .yetkili .balon::before { content:"👤 Yetkili"; display:block; font-size:11.5px; color:#c47f00; font-weight:600; margin-bottom:2px; }
+  .saat { position:absolute; right:8px; bottom:3px; font-size:11px; color:#667781; }
+  .ben .saat::after { content:" ✓✓"; color:#53bdeb; }
+  .balon a { color:#027eb5; }
+  .yaziyor .balon { padding:10px 14px; }
+  .yaziyor i { display:inline-block; width:7px; height:7px; margin:0 2px; border-radius:50%; background:#8696a0;
+               animation:z 1.2s infinite; }
+  .yaziyor i:nth-child(2){animation-delay:.2s} .yaziyor i:nth-child(3){animation-delay:.4s}
+  @keyframes z { 0%,60%,100%{transform:translateY(0);opacity:.5} 30%{transform:translateY(-4px);opacity:1} }
+  #oneriler { display:flex; gap:6px; overflow-x:auto; padding:6px 10px 2px; scrollbar-width:none; }
+  #oneriler button { flex-shrink:0; background:#fff; border:1px solid #d1d7db; color:var(--yesil); border-radius:16px;
+                     padding:6px 12px; font-size:13px; cursor:pointer; }
+  form { display:flex; gap:8px; padding:8px 10px 10px; align-items:flex-end; }
+  textarea { flex:1; resize:none; border:0; border-radius:22px; padding:11px 16px; font:inherit; font-size:15px;
+             max-height:120px; outline:none; background:#fff; }
+  form button { width:46px; height:46px; border-radius:50%; border:0; background:var(--yesil); color:#fff;
+                font-size:20px; cursor:pointer; flex-shrink:0; }
+  form button:disabled { opacity:.5; }
+  .filigran { text-align:center; font-size:11px; color:#667781; opacity:.6; padding:0 0 8px; letter-spacing:.3px; user-select:none; }
+</style>
+</head>
+<body>
+<div class="telefon">
+  <header>
+    <div class="avatar" id="avatar">N</div>
+    <div class="baslik"><b id="ad">Yükleniyor…</b><small id="durum">çevrimiçi</small></div>
+    <button id="sifirla" title="Sohbeti baştan başlat">Sıfırla</button>
+  </header>
+  <div id="akis">
+    <div class="tarih"><span>BUGÜN</span></div>
+    <div class="bilgi">🔒 Bu bir demo ekranıdır. Mesajlarınızı işletmenin yapay zeka asistanı gerçek zamanlı yanıtlar — gerçek WhatsApp'ta da aynen böyle çalışır.</div>
+  </div>
+  <div id="oneriler"></div>
+  <form id="form">
+    <textarea id="giris" rows="1" placeholder="Mesaj yazın" autocomplete="off"></textarea>
+    <button id="gonder" type="submit">➤</button>
+  </form>
+  <div class="filigran">made with NovaDijitalTR</div>
+</div>
+<script>
+const sid = location.pathname.split("/").filter(Boolean).pop();
+const anahtar = "wa-demo-musteri-" + sid;
+let musteri = localStorage.getItem(anahtar);
+if (!musteri) { musteri = "demo-" + Math.random().toString(36).slice(2, 9); localStorage.setItem(anahtar, musteri); }
+let sonId = 0, bekliyor = false;
+const akis = document.getElementById("akis"), giris = document.getElementById("giris"), gonderBtn = document.getElementById("gonder");
+
+const ONERI = {
+  dis_klinigi: ["Merhaba, diş taşı temizliği ne kadar?", "Yarın için randevu alabilir miyim?", "Dişim çok ağrıyor", "Taksit var mı?"],
+  kuafor_guzellik: ["Saç kesimi kaç para?", "Cumartesi fön için yer var mı?", "Balyaj ne kadar sürüyor?", "Gelin başı yapıyor musunuz?"],
+  restoran_kafe: ["Bu akşam 4 kişilik masa var mı?", "Menüde neler var?", "Vejetaryen yemek var mı?", "Paket servis yapıyor musunuz?"],
+  emlak: ["Üsküdar'da satılık 3+1 var mı?", "Kiralık 2+1 bakıyorum", "Komisyon ne kadar?", "Evi görmeye gelebilir miyim?"],
+  oto_servis: ["Periyodik bakım ne kadar?", "Arabam ses yapıyor", "Cuma için randevu", "Aracı alıp getiriyor musunuz?"],
+  fitness_spor: ["Üyelik fiyatları?", "Deneme dersi alabilir miyim?", "Pilates var mı?", "Kadınlara özel alan var mı?"],
+  dijital_ajans: ["Web sitesi yaptırmak istiyorum", "WhatsApp otomasyonu nasıl çalışıyor?", "Reklam videosu fiyatı?", "Görüşme ayarlayalım"],
+};
+
+function saat(z) { const d = z ? new Date(z.replace(" ", "T")) : new Date(); return d.toTimeString().slice(0, 5); }
+function kacis(t) { return t.replace(/[&<>]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c])); }
+function bicim(t) {
+  return kacis(t).replace(/\*(.+?)\*/g, "<b>$1</b>").replace(/_(.+?)_/g, "<i>$1</i>")
+    .replace(/(https?:\/\/[^\s<]+)/g, '<a href="$1" target="_blank">$1</a>');
+}
+function balon(metin, sinif, z) {
+  const s = document.createElement("div");
+  s.className = "satir " + sinif;
+  s.innerHTML = `<div class="balon">${bicim(metin)}<span class="saat">${saat(z)}</span></div>`;
+  akis.appendChild(s); akis.scrollTop = akis.scrollHeight; return s;
+}
+function yaziyorGoster(ac) {
+  document.getElementById("durum").textContent = ac ? "yazıyor…" : "çevrimiçi";
+  let y = document.getElementById("yaziyor");
+  if (ac && !y) { y = document.createElement("div"); y.id = "yaziyor"; y.className = "satir o yaziyor";
+    y.innerHTML = '<div class="balon"><i></i><i></i><i></i></div>'; akis.appendChild(y); akis.scrollTop = akis.scrollHeight; }
+  if (!ac && y) y.remove();
+}
+async function gecmisYukle() {
+  const r = await fetch(`/api/demo/${sid}/mesajlar?musteri=${musteri}&son=${sonId}`);
+  const liste = await r.json();
+  for (const m of liste) {
+    sonId = Math.max(sonId, m.id);
+    balon(m.metin, m.rol === "musteri" ? "ben" : m.rol === "yetkili" ? "o yetkili" : "o", m.zaman);
+  }
+}
+async function gonder(metin) {
+  metin = metin.trim(); if (!metin || bekliyor) return;
+  bekliyor = true; gonderBtn.disabled = true; giris.value = ""; giris.style.height = "";
+  balon(metin, "ben");
+  setTimeout(() => bekliyor && yaziyorGoster(true), 600);
+  try {
+    const r = await fetch(`/api/demo/${sid}/mesaj`, { method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ musteri, metin }) });
+    const v = await r.json();
+    yaziyorGoster(false);
+    if (v.cevap) balon(v.cevap, "o");
+    const son = await (await fetch(`/api/demo/${sid}/mesajlar?musteri=${musteri}&son=0`)).json();
+    sonId = son.length ? son[son.length - 1].id : sonId;
+  } catch (e) { yaziyorGoster(false); balon("⚠️ Bağlantı hatası, tekrar deneyin.", "o"); }
+  bekliyor = false; gonderBtn.disabled = false; giris.focus();
+}
+
+document.getElementById("form").onsubmit = e => { e.preventDefault(); gonder(giris.value); };
+giris.addEventListener("keydown", e => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); gonder(giris.value); } });
+giris.addEventListener("input", () => { giris.style.height = ""; giris.style.height = Math.min(giris.scrollHeight, 120) + "px"; });
+document.getElementById("sifirla").onclick = async () => {
+  if (!confirm("Sohbet ve demo randevuları silinsin mi?")) return;
+  await fetch(`/api/demo/${sid}/sifirla`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ musteri }) });
+  localStorage.removeItem(anahtar); location.reload();
+};
+
+(async () => {
+  const s = await (await fetch(`/api/demo/${sid}`)).json();
+  document.getElementById("ad").textContent = s.ad;
+  document.getElementById("avatar").textContent = s.ad.trim()[0];
+  document.title = s.ad + " — WhatsApp";
+  const kutu = document.getElementById("oneriler");
+  (ONERI[s.sektor] || ["Merhaba", "Fiyatlarınız nedir?", "Randevu almak istiyorum", "Adresiniz nerede?"]).forEach(o => {
+    const b = document.createElement("button"); b.type = "button"; b.textContent = o; b.onclick = () => gonder(o); kutu.appendChild(b);
+  });
+  await gecmisYukle();
+  setInterval(() => { if (!bekliyor) gecmisYukle(); }, 3000); // panelden yetkili yazarsa görünsün
+})();
+</script>
+</body>
+</html>

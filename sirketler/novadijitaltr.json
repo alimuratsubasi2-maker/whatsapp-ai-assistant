@@ -1,0 +1,145 @@
+﻿{
+  "id": "novadijitaltr",
+  "ad": "NovaDijitalTR Yapay Zeka Ajansı",
+  "sektor": "dijital_ajans",
+  "asistan_adi": "Nova",
+  "aciklama": "İşletmelere yapay zeka destekli dijital çözümler: web sitesi, mobil uygulama, WhatsApp otomatik cevap otomasyonu ve yapay zeka reklam videoları. Tüm Türkiye'ye online hizmet.",
+  "adres": "Online hizmet veriyoruz (Türkiye geneli)",
+  "telefon": "",
+  "web": "https://alimuratsubasi2-maker.github.io/ornekler/",
+  "instagram": "",
+  "calisma_saatleri": {
+    "pzt": "10:00-19:00",
+    "sal": "10:00-19:00",
+    "car": "10:00-19:00",
+    "per": "10:00-19:00",
+    "cum": "10:00-19:00",
+    "cmt": "11:00-16:00",
+    "paz": null
+  },
+  "tatil_gunleri": [],
+  "hizmetler": [
+    {
+      "ad": "Ücretsiz tanışma görüşmesi",
+      "fiyat": "Ücretsiz",
+      "sure_dk": 30,
+      "aciklama": "Online görüntülü veya telefonla, ihtiyacınızı dinleyip yol haritası çıkarıyoruz"
+    }
+  ],
+  "urunler": [
+    {
+      "ad": "WhatsApp otomatik cevap otomasyonu",
+      "fiyat": "Fiyat ihtiyaca göre görüşmede netleşir",
+      "detay": "Müşterilerinizin WhatsApp mesajlarına 7/24 otomatik cevap, randevu/rezervasyon alma, sesli mesajları anlama, yetkiliye aktarma ve yönetim paneli. Her sektöre özel kurulur."
+    },
+    {
+      "ad": "Web sitesi - Tek sayfa",
+      "fiyat": "3.000 - 7.000 TL"
+    },
+    {
+      "ad": "Web sitesi - Kurumsal",
+      "fiyat": "8.000 - 20.000 TL"
+    },
+    {
+      "ad": "Web sitesi - E-ticaret",
+      "fiyat": "20.000 TL ve üzeri"
+    },
+    {
+      "ad": "Mobil uygulama - Başlangıç",
+      "fiyat": "4.000 - 9.000 TL"
+    },
+    {
+      "ad": "Mobil uygulama - Standart",
+      "fiyat": "10.000 - 22.000 TL"
+    },
+    {
+      "ad": "Mobil uygulama - Pro",
+      "fiyat": "25.000 TL ve üzeri"
+    },
+    {
+      "ad": "Yapay zeka reklam videosu - Tek video",
+      "fiyat": "750 - 2.000 TL"
+    },
+    {
+      "ad": "Yapay zeka reklam videosu - Aylık 4 video",
+      "fiyat": "3.000 - 6.500 TL"
+    },
+    {
+      "ad": "Yapay zeka reklam videosu - Premium",
+      "fiyat": "2.500 - 6.000 TL"
+    },
+    {
+      "ad": "Bakım + hosting",
+      "fiyat": "400 - 1.200 TL / ay"
+    },
+    {
+      "ad": "Öncelikli destek",
+      "fiyat": "500 TL / ay"
+    },
+    {
+      "ad": "Örnek çalışmalar",
+      "detay": "https://alimuratsubasi2-maker.github.io/ornekler/"
+    },
+    {
+      "ad": "Güncel fiyat listesi",
+      "detay": "https://alimuratsubasi2-maker.github.io/fiyat-listesi/"
+    }
+  ],
+  "sss": [
+    {
+      "soru": "Ödeme nasıl?",
+      "cevap": "%50 peşin, %50 teslimde. Yazılı teklif veriyoruz."
+    },
+    {
+      "soru": "Revizyon hakkı var mı?",
+      "cevap": "2 revizyon ücretsiz, sonrası ek ücretli."
+    },
+    {
+      "soru": "Acil iş yapıyor musunuz?",
+      "cevap": "Evet, acil teslimlerde fiyata %30 eklenir."
+    },
+    {
+      "soru": "Kurumsal firmalar için fiyat?",
+      "cevap": "Kurumsal projelerde kapsam büyüdüğü için fiyat genelde 2-3 katına çıkar, teklif özel hazırlanır."
+    },
+    {
+      "soru": "Ne kadar sürede teslim?",
+      "cevap": "Tek sayfa site birkaç gün, kurumsal site ve uygulamalar 1-4 hafta; kesin süre teklifte yazılır."
+    },
+    {
+      "soru": "WhatsApp numaram ban yer mi / kapanır mı?",
+      "cevap": "Sistemimiz Meta'nın (WhatsApp'ın sahibi) resmi işletme altyapısı WhatsApp Cloud API ile çalışır; Meta bu altyapıyı otomatik cevap için sunar, bu yüzden otomasyon kullandığınız için ban riski yok denecek kadar azdır. Ban haberleri genelde QR kodla WhatsApp Web'e bağlanan gayriresmi programlarla ilgilidir, biz onları kullanmıyoruz. Asistan sadece size yazan müşterilere cevap verir, kendiliğinden toplu mesaj atmaz. Numaranızın güvende kalması için tek şart WhatsApp'ın genel kurallarına uymaktır: izinsiz toplu mesaj göndermemek ve yasaklı ürün satmamak."
+    }
+  ],
+  "kampanyalar": [],
+  "odeme": "Havale/EFT, %50 peşin %50 teslimde",
+  "ek_bilgi": "Ücretsiz örnek tasarım/demo hazırlayabiliyoruz. Bu WhatsApp asistanının kendisi de satılan otomasyonun canlı örneğidir.",
+  "randevu": {
+    "aktif": true,
+    "slot_dk": 30,
+    "kapasite": 1,
+    "varsayilan_sure_dk": 30,
+    "en_az_kac_saat_once": 2,
+    "kac_gun_ileri": 21
+  },
+  "ozel_kurallar": [
+    "Biri 'bu bot mu, nasıl çalışıyor' derse: evet, bu NovaDijitalTR'nin kendi WhatsApp otomasyonu olduğunu, aynısının onların işletmesine de kurulabileceğini söyle."
+  ],
+  "yetkili": {
+    "ad": "Ali",
+    "telegram_chat_id": ""
+  },
+  "whatsapp": {
+    "phone_number_id": "",
+    "waba_id": "",
+    "numara": "+1 555 141 4127",
+    "not": "Meta TEST numarası (en fazla 5 alıcı)"
+  },
+  "kvkk": {
+    "unvan": "NovaDijitalTR",
+    "adres": "",
+    "eposta": "novadijitaltr65@gmail.com",
+    "telefon": "",
+    "saklama_gun": 180
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "ad": "Usta Oto Servis",
+  "asistan_adi": "Burak",
+  "aciklama": "Tüm marka binek araçlar için periyodik bakım, mekanik, elektrik ve lastik hizmeti. Bostancı sanayi sitesinde.",
+  "adres": "Bostancı Oto Sanayi Sitesi C Blok No:14, Kadıköy / İstanbul",
+  "telefon": "0216 222 33 44",
+  "calisma_saatleri": {
+    "pzt": "08:30-18:30",
+    "sal": "08:30-18:30",
+    "car": "08:30-18:30",
+    "per": "08:30-18:30",
+    "cum": "08:30-18:30",
+    "cmt": "08:30-15:00",
+    "paz": null
+  },
+  "hizmetler": [
+    {
+      "ad": "Periyodik bakım (yağ + filtre)",
+      "fiyat": "3.500 TL'den başlayan",
+      "sure_dk": 90
+    },
+    {
+      "ad": "Fren balatası değişimi",
+      "fiyat": "2.200 TL'den başlayan (parça dahil)",
+      "sure_dk": 60
+    },
+    {
+      "ad": "Arıza tespit (bilgisayarlı)",
+      "fiyat": "750 TL",
+      "sure_dk": 30
+    },
+    {
+      "ad": "Lastik değişimi + balans (4 lastik)",
+      "fiyat": "1.200 TL",
+      "sure_dk": 45
+    },
+    {
+      "ad": "Klima gazı dolumu",
+      "fiyat": "1.400 TL",
+      "sure_dk": 45
+    },
+    {
+      "ad": "Detaylı iç-dış yıkama",
+      "fiyat": "900 TL",
+      "sure_dk": 90
+    }
+  ],
+  "sss": [
+    {
+      "soru": "Garanti veriyor musunuz?",
+      "cevap": "Yapılan işçiliğe 6 ay, değişen parçalara üretici garantisi geçerli."
+    },
+    {
+      "soru": "Aracı alıp getiriyor musunuz?",
+      "cevap": "Kadıköy ve Ataşehir içinde 500 TL'ye vale hizmeti var."
+    }
+  ],
+  "kampanyalar": [
+    "Kış bakım paketi: akü + antifriz + lastik kontrolü ücretsiz (periyodik bakımla)"
+  ],
+  "odeme": "Nakit, kredi kartı (3 taksit)",
+  "randevu": {
+    "aktif": true,
+    "slot_dk": 30,
+    "kapasite": 3,
+    "varsayilan_sure_dk": 60,
+    "en_az_kac_saat_once": 2,
+    "kac_gun_ileri": 21
+  },
+  "yetkili": {
+    "ad": "Servis şefi",
+    "telegram_chat_id": ""
+  },
+  "ozel_kurallar": [],
+  "whatsapp": {
+    "phone_number_id": ""
+  },
+  "id": "demo-oto-servis",
+  "sektor": "oto_servis",
+  "demo": true
+}

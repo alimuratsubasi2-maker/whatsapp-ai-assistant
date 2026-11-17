@@ -1,0 +1,90 @@
+{
+  "ad": "Gülüş Ağız ve Diş Sağlığı Polikliniği",
+  "asistan_adi": "Elif",
+  "aciklama": "Kadıköy'de 12 yıllık deneyimli diş polikliniği. 4 diş hekimi, panoramik röntgen ve dijital gülüş tasarımı.",
+  "adres": "Caferağa Mah. Moda Cad. No:45 Kat:2, Kadıköy / İstanbul",
+  "telefon": "0216 555 12 34",
+  "calisma_saatleri": {
+    "pzt": "09:00-19:00",
+    "sal": "09:00-19:00",
+    "car": "09:00-19:00",
+    "per": "09:00-19:00",
+    "cum": "09:00-19:00",
+    "cmt": "10:00-16:00",
+    "paz": null
+  },
+  "hizmetler": [
+    {
+      "ad": "Muayene ve kontrol",
+      "fiyat": "750 TL",
+      "sure_dk": 30
+    },
+    {
+      "ad": "Diş taşı temizliği",
+      "fiyat": "1.500 TL",
+      "sure_dk": 45
+    },
+    {
+      "ad": "Dolgu",
+      "fiyat": "2.000 TL'den başlayan",
+      "sure_dk": 45
+    },
+    {
+      "ad": "Kanal tedavisi",
+      "fiyat": "4.500 TL'den başlayan",
+      "sure_dk": 60
+    },
+    {
+      "ad": "Diş beyazlatma (ofis tipi)",
+      "fiyat": "6.000 TL",
+      "sure_dk": 90
+    },
+    {
+      "ad": "İmplant",
+      "fiyat": "18.000 TL'den başlayan (muayene sonrası netleşir)",
+      "sure_dk": 60
+    },
+    {
+      "ad": "Çocuk diş hekimliği muayenesi",
+      "fiyat": "750 TL",
+      "sure_dk": 30
+    }
+  ],
+  "sss": [
+    {
+      "soru": "Otopark var mı?",
+      "cevap": "Binanın arkasında anlaşmalı otopark var, 2 saat ücretsiz."
+    },
+    {
+      "soru": "SGK geçerli mi?",
+      "cevap": "SGK anlaşmamız yok, bazı özel sigortalarla anlaşmamız var; sigorta adını yazarsanız kontrol ederiz."
+    },
+    {
+      "soru": "Taksit var mı?",
+      "cevap": "Kredi kartına 6 aya kadar taksit yapılıyor."
+    }
+  ],
+  "kampanyalar": [
+    "Kasım ayına özel: diş taşı temizliği + kontrol 1.900 TL"
+  ],
+  "odeme": "Nakit, kredi kartı (6 taksit), havale",
+  "randevu": {
+    "aktif": true,
+    "slot_dk": 30,
+    "kapasite": 3,
+    "varsayilan_sure_dk": 30,
+    "en_az_kac_saat_once": 2,
+    "kac_gun_ileri": 30
+  },
+  "yetkili": {
+    "ad": "Klinik sekreteri",
+    "telegram_chat_id": ""
+  },
+  "ozel_kurallar": [],
+  "whatsapp": {
+    "phone_number_id": ""
+  },
+  "id": "demo-dis-klinigi",
+  "sektor": "dis_klinigi",
+  "demo": true
+}

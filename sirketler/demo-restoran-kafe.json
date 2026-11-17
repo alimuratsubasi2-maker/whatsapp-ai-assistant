@@ -1,0 +1,90 @@
+{
+  "ad": "Lezzet Durağı Ocakbaşı",
+  "asistan_adi": "Ece",
+  "aciklama": "Beşiktaş'ta ocakbaşı ve meze restoranı. 90 kişilik iç salon + 40 kişilik bahçe.",
+  "adres": "Sinanpaşa Mah. Ihlamurdere Cad. No:30, Beşiktaş / İstanbul",
+  "telefon": "0212 333 22 11",
+  "calisma_saatleri": {
+    "pzt": "12:00-23:30",
+    "sal": "12:00-23:30",
+    "car": "12:00-23:30",
+    "per": "12:00-23:30",
+    "cum": "12:00-23:30",
+    "cmt": "12:00-23:59",
+    "paz": "12:00-23:00"
+  },
+  "hizmetler": [
+    {
+      "ad": "Masa rezervasyonu",
+      "fiyat": "Ücretsiz",
+      "sure_dk": 120
+    }
+  ],
+  "urunler": [
+    {
+      "ad": "Adana kebap",
+      "fiyat": "520 TL"
+    },
+    {
+      "ad": "Kuzu şiş",
+      "fiyat": "640 TL"
+    },
+    {
+      "ad": "Karışık ızgara (2 kişilik)",
+      "fiyat": "1.450 TL"
+    },
+    {
+      "ad": "Meze tabağı (6 çeşit)",
+      "fiyat": "480 TL"
+    },
+    {
+      "ad": "Künefe",
+      "fiyat": "260 TL"
+    },
+    {
+      "ad": "Ayran",
+      "fiyat": "70 TL"
+    },
+    {
+      "ad": "Vejetaryen seçenekler",
+      "detay": "Közlenmiş sebze tabağı 340 TL, mantar sote 290 TL"
+    }
+  ],
+  "sss": [
+    {
+      "soru": "Paket servis var mı?",
+      "cevap": "Evet, Yemeksepeti ve Trendyol Yemek'te 'Lezzet Durağı Beşiktaş' adıyla varız."
+    },
+    {
+      "soru": "Alkol var mı?",
+      "cevap": "Evet, rakı, şarap ve bira servisimiz var."
+    },
+    {
+      "soru": "Otopark?",
+      "cevap": "Vale hizmetimiz var (150 TL)."
+    }
+  ],
+  "kampanyalar": [
+    "Hafta içi 12:00-15:00 iş menüsü 390 TL (çorba + ana yemek + içecek)"
+  ],
+  "odeme": "Nakit, kredi kartı, yemek kartları (Multinet, Sodexo, Ticket)",
+  "randevu": {
+    "aktif": true,
+    "slot_dk": 30,
+    "kapasite": 12,
+    "varsayilan_sure_dk": 120,
+    "en_az_kac_saat_once": 1,
+    "kac_gun_ileri": 30
+  },
+  "yetkili": {
+    "ad": "Restoran müdürü",
+    "telegram_chat_id": ""
+  },
+  "ozel_kurallar": [],
+  "whatsapp": {
+    "phone_number_id": ""
+  },
+  "id": "demo-restoran-kafe",
+  "sektor": "restoran_kafe",
+  "demo": true
+}
